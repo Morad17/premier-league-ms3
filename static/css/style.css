@@ -1,0 +1,44 @@
+/*------Main-----*/
+/*------NavBar-----*/
+nav a, nav h2{
+    color:#fff !important;
+}
+.navbar-default{
+    background-color: #3d195b;
+    border-color:#3d195b;
+}
+.navbar .container-fluid{
+    justify-content: flex-end !important;
+}
+.logo{
+    width:100px;
+
+}
+.navbar-brand h2{
+    font-size: 35px;
+}
+.navbar-brand img{
+    margin-top: -10px;
+    margin-right: 10px;
+}
+.nav-item{
+    padding: 0 10px;
+}
+.navbar-nav a{
+    font-size: 17px;
+}
+.navbar-brand img, .navbar-brand h2{
+    display: inline-block;
+}
+.dropdown-menu{
+    background-color:#3d195b;
+    border-color:#3d195b;
+}
+.dropdown-menu a:hover{
+    background-color:#000000;
+    border-color:#000000;
+}
+.dropdown{
+        padding-top: 8px;
+
+}
