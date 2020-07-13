@@ -13,7 +13,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_clubs')
 def get_clubs():
-    return render_template("landing-page.html", clubs=mongo.db.Clubs.find())
+    return render_template("base-page.html", clubs=mongo.db.Clubs.find())
 
 
 if __name__ == '__main__':
