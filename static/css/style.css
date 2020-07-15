@@ -120,6 +120,11 @@ nav a, nav h2{
     background-color:#FDB913;
     border-color:#FDB913;
 }
+/*--Jumbotron--*/
+.jumbotron{
+    padding: 10px 20px;
+    margin-bottom:350px;
+}
 /*---Main Page Content----*/
 .card-row{
     margin-top:50px;
