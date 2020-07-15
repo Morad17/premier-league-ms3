@@ -16,6 +16,10 @@ def get_clubs():
     return render_template("landing-page.html")
 
 
+@app.route('/arsenal')
+def arsenal():
+    return render_template("arsenal.html")
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
