@@ -123,9 +123,17 @@ nav a, nav h2{
 /*--Jumbotron--*/
 .jumbotron{
     padding: 10px 20px;
-    margin-bottom:350px;
+    margin-bottom: 0;
+}
+.jumbotron img{
+    width:100px;
 }
 /*---Main Page Content----*/
+.hero-image{
+width:100%;
+}
+
+/*--Landing-page--*/
 .card-row{
     margin-top:50px;
 }

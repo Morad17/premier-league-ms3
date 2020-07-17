@@ -1,8 +1,19 @@
 {% extends 'base.html'%}
 {% block content %}
-
-        {% for club in clubs %}
-            {{club.team_name}}
-        {% endfor %}
-
+<!--Jumbotron-->
+        <div class="row justify-content-center no-gutters">
+        <div class=" col-sm-12 col-md-8">
+            <div class="jumbotron ">
+                <h2 class="display-4"></h2>
+                <h2>Nickname: The Gunners</h2>
+                <img src="{{url_for('static', filename='img/arsenal-logo.png')}}">
+            </div>
+        </div>
+        </div>
+        <!--Club About Page-->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8">
+            <img class="hero-image" src="{{url_for('static', filename='img/arsenal-hero.jpg')}}">
+            </div>
+        </div>
 {% endblock %}

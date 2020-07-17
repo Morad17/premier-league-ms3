@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'premierLeague'
-app.config["MONGO_URI"] = 'mongodb+srv://root:Password20@myfirstcluster-ay9fk.mongodb.net/premierLeague?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://root:London20@myfirstcluster-ay9fk.mongodb.net/premierLeague?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
@@ -18,7 +18,20 @@ def get_clubs():
 
 @app.route('/arsenal')
 def arsenal():
-    return render_template("arsenal.html")
+    details = mongo.db.Team_Details.find({'team_name':'Arsenal FC'})
+    trophies = mongo.db.Trophies_Won.find({'team_name':'Arsenal FC'})
+    
+    return render_template("arsenal.html",details=details, trophies=trophies)
+
+@app.route('/aston_villa')
+
+def aston_villa():
+    details = mongo.db.Team_Details.find({'team_name':'Aston Villa'})
+    trophies = mongo.db.Trophies_Won.find({'team_name':'Aston Villa'})
+    
+    return render_template("aston-villa.html", details=details, trophies=trophies)
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
