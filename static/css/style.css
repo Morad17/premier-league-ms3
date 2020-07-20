@@ -1,4 +1,7 @@
 /*------Main-----*/
+body{
+    background-image: url('/static/img/background-image.jpg');
+}
 /*------NavBar-----*/
 nav a, nav h2{
     color:#fff !important;
@@ -124,14 +127,43 @@ nav a, nav h2{
 .jumbotron{
     padding: 10px 20px;
     margin-bottom: 0;
+    margin-top: 40px;
+
 }
+.jumbotron-team{
+    padding: 10px 20px;
+    margin-bottom: 0;
+    margin-top: 40px;
+    display:flex;
+    align-items:center;
+}
+.jumbotron .container{
+display: flex;
+justify-content: flex-end
+}
+
 .jumbotron img{
     width:100px;
 }
+.jumbotron p{
+    font-size: 21px;
+    font-weight: 400;
+}
+.jumbotron-team h2{
+    margin-left: 40px;
+    font-size: 55px; 
+}
+
 /*---Main Page Content----*/
 .hero-image{
 width:100%;
+height:85%;
 }
+.content div{
+padding-left:0;
+padding-right:0;
+}
+
 
 /*--Landing-page--*/
 .card-row{
@@ -219,5 +251,30 @@ color:#fff;
     bottom: 55px;
 }
 .trophy{
-    width:200px;
+    width:130px;
+}
+.number{
+    border-radius: 10px;
+    background-color: #3d195b;
+    display: inline-block;
+    font-size: 60px;
+    color: white;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+].number p{
+    margin-top: -4px;
+}
+.container-fluid h4{
+    margin-top: 30px;
+}
+.team-details .container-fluid{
+margin-top: 40px;
+}
+.main-heading{
+    font-size:45px;
+}
+.team-details p{
+    font-size: 20px;
 }

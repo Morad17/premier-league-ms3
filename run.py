@@ -12,6 +12,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/get_clubs')
+
 def get_clubs():
     return render_template("landing-page.html")
 
@@ -21,7 +22,7 @@ def arsenal():
     details = mongo.db.Team_Details.find({'team_name':'Arsenal FC'})
     trophies = mongo.db.Trophies_Won.find({'team_name':'Arsenal FC'})
     
-    return render_template("arsenal.html",details=details, trophies=trophies)
+    return render_template("arsenal.html", details=details , trophies=trophies )
 
 @app.route('/aston_villa')
 
