@@ -73,6 +73,26 @@
         {% endblock %}
         
         {% for detail in details %}
+        <!--Jumbotron-->
+
+        <div class="row justify-content-center no-gutters">
+        <div class=" col-sm-12 col-md-8">
+            <div class="jumbotron jumbotron-team">
+                <img src="{{ detail.logo }}">
+                <h2>{{ detail.team_name }}</h2>
+                <div class="container">
+                <h2 >"{{detail.nickname}}"</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--Club About Page-->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8">
+            <img class="hero-image" src=" {{ detail.hero_image }}">
+            </div>
+        </div>
+
         <div class="row justify-content-center content no-gutters">
         
             <div class="team-details col-sm-12 col-md-6">
@@ -92,7 +112,7 @@
                     <h3>Stadium</h3>
                     <h4>{{ detail.training_ground }}</h4>
                     <h4>Capacity: {{ detail.ground_capacity }}</h4>
-                    <img src="{{url_for('static', filename='emirates-stadium.jpg')}}">
+                    <img src="{{ detail.stadium_url }}">
                 </div>
                 <div class="container-fluid">
                     <h3>Manager: {{ detail.manager }}</h3>
@@ -103,6 +123,7 @@
         {% endfor %}
 
             {% for trophy in trophies %}
+            
             <div class="col-sm-12 col-md-2">
                 <h2 class="main-heading">Trophies Won</h2>
                     <div class="container-fluid">
