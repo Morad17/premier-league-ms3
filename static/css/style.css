@@ -272,9 +272,21 @@ color:#fff;
 .team-details .container-fluid{
 margin-top: 40px;
 }
+.team-details p{
+    margin-right:100px;
+}
 .main-heading{
     font-size:45px;
 }
 .team-details p{
     font-size: 20px;
+}
+
+.stadium{
+    width:600px;
+}
+.table{
+    color: white;
+    background-color: #3d195b;
+    margin-top: 50px;
 }
