@@ -20,160 +20,164 @@ def get_clubs():
 ###Club Links#####
 @app.route('/arsenal')
 def arsenal():
-    details = mongo.db.Team_Details.find({'team_name':'Arsenal FC'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Arsenal FC'})
+    details = mongo.db.Team_Details.find({'club':'Arsenal FC'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Arsenal FC'})
     players = mongo.db.Club_Players.find({'club':'Arsenal'})
     
     return render_template("arsenal.html", details=details , trophies=trophies, players=players  )
 
 @app.route('/aston_villa')
 def aston_villa():
-    details = mongo.db.Team_Details.find({'team_name':'Aston Villa'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Aston Villa'})
+    details = mongo.db.Team_Details.find({'club':'Aston Villa'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Aston Villa'})
     players = mongo.db.Club_Players.find({'club':'Aston Villa'})
     
     return render_template("aston-villa.html", details=details , trophies=trophies, players=players )
 
 @app.route('/bournemouth')
 def bournemouth():
-    details = mongo.db.Team_Details.find({'team_name':'AFC Bournemouth'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'AFC Bournemouth'})
+    details = mongo.db.Team_Details.find({'club':'AFC Bournemouth'})
+    trophies = mongo.db.Trophies_Won.find({'club':'AFC Bournemouth'})
     players = mongo.db.Club_Players.find({'club':'AFC Bournemouth'})
     
     return render_template("aston-villa.html", details=details, trophies=trophies, players=players)
 
 @app.route('/brighton')
 def brighton():
-    details = mongo.db.Team_Details.find({'team_name':'Brighton & Hove Albion'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Brighton & Hove Albion'})
+    details = mongo.db.Team_Details.find({'club':'Brighton & Hove Albion'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Brighton & Hove Albion'})
     players = mongo.db.Club_Players.find({'club':'Brighton & Hove Albion'})
     
     return render_template("brighton.html", details=details, trophies=trophies, players=players)
 
 @app.route('/burnley')
 def burnley():
-    details = mongo.db.Team_Details.find({'team_name':'Burnley'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Burnley'})
+    details = mongo.db.Team_Details.find({'club':'Burnley'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Burnley'})
     players = mongo.db.Club_Players.find({'club':'Burnley'})
     
     return render_template("burnley.html", details=details, trophies=trophies, players=players)
 
 @app.route('/chelsea')
 def chelsea():
-    details = mongo.db.Team_Details.find({'team_name':'Chelsea'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Chelsea'})
+    details = mongo.db.Team_Details.find({'club':'Chelsea'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Chelsea'})
     players = mongo.db.Club_Players.find({'club':'Chelsea'})
     
     return render_template("chelsea.html", details=details, trophies=trophies, players=players)
 
 @app.route('/crystal_palace')
 def crystal_palace():
-    details = mongo.db.Team_Details.find({'team_name':'Crystal Palace'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Crystal Palace'})
+    details = mongo.db.Team_Details.find({'club':'Crystal Palace'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Crystal Palace'})
     players = mongo.db.Club_Players.find({'club':'Crystal Palace'})
     
     return render_template("crystal-palace.html", details=details, trophies=trophies, players=players)
 
 @app.route('/everton')
 def everton():
-    details = mongo.db.Team_Details.find({'team_name':'Everton'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Everton'})
+    details = mongo.db.Team_Details.find({'club':'Everton'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Everton'})
     players = mongo.db.Club_Players.find({'club':'Everton'})
     
     return render_template("everton.html", details=details, trophies=trophies, players=players)
 
 @app.route('/leicester')
 def leicester():
-    details = mongo.db.Team_Details.find({'team_name':'Leicester City'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Leicester City'})
+    details = mongo.db.Team_Details.find({'club':'Leicester City'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Leicester City'})
     players = mongo.db.Club_Players.find({'club':'Leicester City'})
     
     return render_template("leicester-city.html", details=details, trophies=trophies, players=players)
 
 @app.route('/liverpool')
 def liverpool():
-    details = mongo.db.Team_Details.find({'team_name':'Liverpool'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Liverpool'})
+    details = mongo.db.Team_Details.find({'club':'Liverpool'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Liverpool'})
     players = mongo.db.Club_Players.find({'club':'Liverpool'})
     
     return render_template("liverpool.html", details=details, trophies=trophies, players=players)
 
 @app.route('/manchester_city')
 def manchester_city():
-    details = mongo.db.Team_Details.find({'team_name':'Manchester City'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Manchester City'})
+    details = mongo.db.Team_Details.find({'club':'Manchester City'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Manchester City'})
     players = mongo.db.Club_Players.find({'club':'Manchester City'})
     
     return render_template("manchester-city.html", details=details, trophies=trophies, players=players)
 
 @app.route('/manchester_united')
 def manchester_united():
-    details = mongo.db.Team_Details.find({'team_name':'Manchester United'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Manchester United'})
+    details = mongo.db.Team_Details.find({'club':'Manchester United'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Manchester United'})
     players = mongo.db.Club_Players.find({'club':'Manchester United'})
     
     return render_template("manchester-united.html", details=details, trophies=trophies, players=players)
 
 @app.route('/newcastle')
 def newcastle():
-    details = mongo.db.Team_Details.find({'team_name':'Newcastle United'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Newcastle United'})
+    details = mongo.db.Team_Details.find({'club':'Newcastle United'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Newcastle United'})
     players = mongo.db.Club_Players.find({'club':'Newcastle United'})
     
     return render_template("newcastle.html", details=details, trophies=trophies, players=players)
 
 @app.route('/norwhich')
 def norwhich():
-    details = mongo.db.Team_Details.find({'team_name':'Norwhich City'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Norwhich City'})
+    details = mongo.db.Team_Details.find({'club':'Norwhich City'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Norwhich City'})
     players = mongo.db.Club_Players.find({'club':'Norwhich City'})
     
     return render_template("norwhich.html", details=details, trophies=trophies, players=players)
 
 @app.route('/sheffield')
 def sheffield():
-    details = mongo.db.Team_Details.find({'team_name':'Sheffield United'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Sheffield United'})
+    details = mongo.db.Team_Details.find({'club':'Sheffield United'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Sheffield United'})
     players = mongo.db.Club_Players.find({'club':'Sheffield United'})
     
     return render_template("sheffield.html", details=details, trophies=trophies, players=players)
 
 @app.route('/southampton')
 def southampton():
-    details = mongo.db.Team_Details.find({'team_name':'Southampton'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Southampton'})
+    details = mongo.db.Team_Details.find({'club':'Southampton'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Southampton'})
     
     
     return render_template("southampton.html", details=details, trophies=trophies, players=players)
 
 @app.route('/spurs')
 def spurs():
-    details = mongo.db.Team_Details.find({'team_name':'Tottenham Hotspur'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Tottenham Hotspur'})
+    details = mongo.db.Team_Details.find({'club':'Tottenham Hotspur'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Tottenham Hotspur'})
     
     return render_template("tottenham.html", details=details, trophies=trophies, players=players)
 
 @app.route('/watford')
 def watford():
-    details = mongo.db.Team_Details.find({'team_name':'Watford'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Watford'})
+    details = mongo.db.Team_Details.find({'club':'Watford'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Watford'})
     
     return render_template("watford.html", details=details, trophies=trophies, players=players)
 
 @app.route('/west_ham')
 def west_ham():
-    details = mongo.db.Team_Details.find({'team_name':'West Ham United'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'West Ham United'})
+    details = mongo.db.Team_Details.find({'club':'West Ham United'})
+    trophies = mongo.db.Trophies_Won.find({'club':'West Ham United'})
     
     return render_template("west-ham.html", details=details, trophies=trophies, players=players)
 
 @app.route('/wolves')
 def wolves():
-    details = mongo.db.Team_Details.find({'team_name':'Wolverhampton Wanderers'})
-    trophies = mongo.db.Trophies_Won.find({'team_name':'Wolverhampton Wanderers'})
+    details = mongo.db.Team_Details.find({'club':'Wolverhampton Wanderers'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Wolverhampton Wanderers'})
     
     return render_template("wolves.html", details=details, trophies=trophies, players=players)
 
+
+@app.route('/add_club')
+def add_club():
+    return render_template("addclub.html")
 
 
 if __name__ == '__main__':

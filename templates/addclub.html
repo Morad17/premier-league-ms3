@@ -1,0 +1,146 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+        <title>Home</title>
+    </head>
+    <body>
+    <!--Navbar-->
+        <nav class="navbar navbar-expand-xl navbar-default sticky-top">
+            <a href="" class="navbar-brand"><img class="logo" src="https://res.cloudinary.com/chelsea-production/image/upload/c_fill,dpr_auto,f_auto,fl_lossy,g_auto,h_320,q_auto,w_640,z_1.0/v1/logos/leagues/Premier_League_logo_transparent" alt="premier league"><h2>Premier League</h2></a>
+            <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <!--All Teams Dropdown -->
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clubs<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" class="dropdown-item arsenal-link">Arsenal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item aston-villa-link">Aston Villa</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item bournemouth-link">Bournemouth</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item brighton-link">Brighton</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item burnley-link">Burnley</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item chelsea-link">Chelsea</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item crystal-palace-link">Crystal Palace</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item everton-link">Everton</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item leicester-link">Leicester</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item liverpool-link">Liverpool</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item man-city-link">Man City</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item man-united-link">Man Utd</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item newcastle-link">Newcastle</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item norwhich-link">Norwich</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item sheffield-link">Sheffield</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item southampton-link">Southampton</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item tottenham-link">Spurs</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item watford-link">Watford</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item west-ham-link">West Ham</a>
+                        </li><li>
+                            <a href="#" class="dropdown-item wolverhampton-link">Wolves</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Add Club</a>
+                </li>
+            </div>
+        </nav>
+        <!--Jumbotron-->
+        <div class="row justify-content-center no-gutters">
+            <div class=" col-sm-12 col-md-8">
+                <div class="jumbotron ">
+                    <p class="lead">Have you ever had trouble understand peoples conversations when talking about football? Or do struggle keeping up to date with the latest 
+                    Premier League changes, like the players and whose won what cup? Well this database will help you to answer all these questions and more. This Database has 
+                    been designed to keep up to date with players, clubs and information about both. This will also let you update any out of date information. To get started click 
+                    on the desired club down below. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center no-gutters">
+            <div class="col-sm-12 col-md-8">
+                <h3>Add Clubs</h3>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label for="club-name">Club Name</label>
+                        <input id="club_name" name="club_name" type="text" class="validate" placeholder="Club Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Club Nickname</label>
+                        <input id="club_nickname" name="club_nickname" type="text" class="validate" placeholder="Club Nickname">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Background Bio</label>
+                        <input id="background_bio" name="background_bio" type="textarea" class="validate" placeholder="Bio">
+                    </div>
+                    <div class="form-group"> 
+                        <label for="club-name">Year Of Inception</label>
+                        <input id="year_for_inception" name="year_of_inception"type="text" class="validate" placeholder="Year">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Training Ground</label>
+                        <input id="training_ground" name="training_ground" type="text" class="validate" placeholder="Ground Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Stadium</label>
+                        <input id="stadium" name="stadium" type="text" class="validate" placeholder="Url of Stadium Image">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Ground Capacity</label>
+                        <input id="ground_capacity" name="ground_capacity" type="text" class="validate" placeholder="Ground Capacity">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Manager</label>
+                        <input id="manager" name="manager" type="text" class="validate" placeholder="Manager">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Website Link</label>
+                        <input id="website" name="website" type="text" class="validate" placeholder="Website link">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Front Image</label>
+                        <input id="hero_image" name="hero_image" type="text" class="validate" placeholder="Image Url">
+                    </div>
+                    <div class="form-group">
+                        <label for="club-name">Club Logo</label>
+                        <input id="club_logo" name="club_logo" type="text" class="validate" placeholder="Logo Url">
+                    </div>
+                    <div class="submit">
+                        <button class="btn btn-primary" type="submit">Add Club</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,6 +1,7 @@
 /*------Main-----*/
 body{
-    background-image: url('/static/img/background-image.jpg');
+    background-image: url('/static/img/background-image.jpg') ;
+    background-size: cover;
 }
 /*------NavBar-----*/
 nav a, nav h2{

@@ -96,7 +96,7 @@
         <div class="row justify-content-center content no-gutters">
         
             <div class="team-details col-sm-12 col-md-6">
-                <h2 class="main-heading">{{ detail.team_name }}</h2>
+                <h2 class="main-heading">{{ detail.club }}</h2>
                 
                 <div class="container-fluid">
                     <h3>Nickname: </h3>
@@ -127,10 +127,10 @@
             <div class="col-sm-12 col-md-2">
                 <h2 class="main-heading">Trophies Won</h2>
                     <div class="container-fluid">
-                        <h4>Premier League </h4>
+                        <h4>English Champion </h4>
                         <img class="trophy" src="{{url_for('static', filename='img/trophy/premier-league-cup.png')}}" >
                         <div class="container number">
-                        <p>{{ trophy.premier_league_trophies }}</p>
+                        <p>{{ trophy.english_champion_trophies }}</p>
                         </div>
                     </div>
                     <div class="container-fluid">
