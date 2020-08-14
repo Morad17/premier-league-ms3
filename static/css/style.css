@@ -3,6 +3,9 @@ body{
     background-image: url('/static/img/background-image.jpg') ;
     background-size: cover;
 }
+.edit-heading{
+    text-align:center;
+}
 /*------NavBar-----*/
 nav a, nav h2{
     color:#fff !important;
