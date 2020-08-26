@@ -85,23 +85,26 @@
                 <h3>Edit Club</h3>
                 <form action="{{ url_for('update_club', club_id=club._id) }}" method="POST">
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<span class="caret"></span></a>
-                        {% for cat in categories %}
-                        <p>{{ cat }}</p>
+                        <div class="form-group">
+                            <label for="sel1">Select list:</label>
+                            <select class="form-control" id="category" name="category_type">
 
-                        {% endfor %}
-
-                        <ul class="dropdown-menu">
-                        {% for cat in categories %}
-                            <li class="dropdown-item">
-                                <div class="form-group">
-                                    <label for="{{cat.category_name}}">{{ cat.category_name.replace("_"," ") }}</label>
-                                </div>
-                            </li>
-                        {% endfor %}
+                             {% for cat in categories %}
+                                <option value="{{ cat.category_name }}" selected>{{ cat.category_name.replace('_',' ') }}</option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                        </div>
+                        {% for detail in details %}
                         
-                        </ul>
-                    </div>
+                        {% if detail.club_id == cat.category_name %}
+                         <div class="input-field col s12">
+                            <input id="{{ cat.category_name}}" name="{{cat.category_name}}" type="text" class="validate" value="{{cat.category_name}}">
+                            <label for="icon_prefix">{{ cat.category_name.replace('_',' ') }}</label>
+                        </div>
+                        {% else %}
+                    {% endif %}
+                    {% endfor %}
                     <div class="submit">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>

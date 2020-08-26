@@ -17,15 +17,17 @@ def get_clubs():
 
     return render_template("landing-page.html", detail=detail)
 
-###Club Links#####
+###Club Links ( )#####
 @app.route('/arsenal')
 def arsenal():
-    club = mongo.db.Team_Details.find({'club':'Arsenal FC'})
+    category = mongo.db.Team_Details.find({'club':'Arsenal FC'})
     details = mongo.db.Team_Details.find({'club':'Arsenal FC'})
     trophies = mongo.db.Trophies_Won.find({'club':'Arsenal FC'})
     players = mongo.db.Club_Players.find({'club':'Arsenal FC'})
+    categories = list(mongo.db.Club_Categories.find())
     
-    return render_template("arsenal.html", details=details , trophies=trophies, players=players, club=club )
+    
+    return render_template("arsenal.html", details=details, trophies=trophies, players=players, categories=categories, category=category)
 
 @app.route('/aston_villa')
 def aston_villa():
@@ -184,32 +186,23 @@ def insert_club():
 
     return render_template("addclub.html", )
 
-@app.route('/edit_club/<club_id>')
-def edit_club(club_id): 
-    club = mongo.db.Team_Details.find_one({"_id":ObjectId(club_id)})
-    details = mongo.db.Team_Details.find({"_id":ObjectId(club_id)})
+@app.route('/edit_club/<player_id>')
+def edit_club(player_id): 
+    player = mongo.db.Club_Players.find_one({"_id":ObjectId(player_id)})
     categories = list(mongo.db.Club_Categories.find())
-    return render_template('editclub.html', club=club ,details=details, categories=categories)
+    return render_template('editplayer.html', player=player, categories=categories)
 
 
-@app.route('/update_club/<club_id>', methods=["POST"])
-def update_club(club_id):
-    club = mongo.db.Team_Details
-    club.update(  {'_id': ObjectId(club_id)},
-    {
-        'club': request.form.get('club'),
-        'nickname': request.form.get('nickname'),
-        'background': request.form.get('background'),
-        'training_ground':  request.form.get('training_ground'),
-        'stadium_url': request.form.get('stadium_url'),
-        'ground_capacity': request.form.get('ground_capacity'),
-        'manager': request.form.get('manager'),
-        'website': request.form.get('website'),
-        'hero_image': request.form.get('hero_image'),
-        'logo': request.form.get('logo'),
-        'team_color': request.form.get('team_color')
+@app.route('/update_player/<player_id>', methods=["POST"])
+def update_club(player_id):
+    player = mongo.db.Club_Players
+    player.update(  {'_id': ObjectId(player_id)},
+    {'player_club': request.form.get('club')},
+    {'player_name': request.form.get('name')},
+    {'player_position': request.form.get('position')},
+    {'player_nationality': request.form.get('nationality')},
+    {'player_number': request.form.get('number')}, {"upsert":False})
 
-    })
     return redirect(url_for('get_clubs'))
 
 
