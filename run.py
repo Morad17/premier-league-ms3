@@ -186,25 +186,33 @@ def insert_club():
 
     return render_template("addclub.html", )
 
-@app.route('/edit_club/<player_id>')
-def edit_club(player_id): 
+@app.route('/edit_player/<player_id>')
+def edit_player(player_id): 
     player = mongo.db.Club_Players.find_one({"_id":ObjectId(player_id)})
     categories = list(mongo.db.Club_Categories.find())
     return render_template('editplayer.html', player=player, categories=categories)
 
+###Updateing Player Info#####
 
 @app.route('/update_player/<player_id>', methods=["POST"])
-def update_club(player_id):
+def update_player(player_id):
     player = mongo.db.Club_Players
+    print(f"Player's id is {player_id}")
+    print(f"Player details are: club - {request.form.to_dict()['player_club']}")
     player.update(  {'_id': ObjectId(player_id)},
-    {'player_club': request.form.get('club')},
-    {'player_name': request.form.get('name')},
-    {'player_position': request.form.get('position')},
-    {'player_nationality': request.form.get('nationality')},
-    {'player_number': request.form.get('number')}, {"upsert":False})
+    {'club': request.form.get("player_club"),
+    'name': request.form.get('player_name'),
+    'position': request.form.get('player_position'),
+    'nationality': request.form.get('player_nationality'),
+    'number': request.form.get('player_number')})
 
     return redirect(url_for('get_clubs'))
+######Delete Player####
 
+@app.route('/delete_player/<player_id>')
+def delete_player(player_id):
+    mongo.db.Club_Players.remove({"_id":ObjectId(player_id)})
+    return redirect(url_for('get_clubs'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
