@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{url_for('static', filename='icons/flaticon.css')}}" type="text/css" />
         <title>Home</title>
     </head>
     <body>
@@ -65,126 +66,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">ChangeClub</a>
+                    <a href="{{url_for('add_player')}}" class="nav-link">Add Player</a>
                 </li>
                 
             </div>
         </nav>
-       
-        
-        {% for detail in details %}
-        <!--Jumbotron-->
 
-        <div class="row justify-content-center no-gutters">
-        <div class=" col-sm-12 col-md-8">
-            <div class="jumbotron jumbotron-team">
-                <img src="{{ detail.logo }}">
-                <h2>{{ detail.team_name }}</h2>
-                <div class="container">
-                <h2 >"{{detail.nickname}}"</h2>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!--Club About Page-->
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8">
-            <img class="hero-image" src=" {{ detail.hero_image }}">
-            </div>
-        </div>
-
-        <div class="row justify-content-center content no-gutters">
-        
-            <div class="team-details col-sm-12 col-md-6">
-                <h2 class="main-heading">{{ detail.club }}</h2>
-                
-                <div class="container-fluid">
-                    <h3>Nickname: </h3>
-                    <p>{{ detail.nickname }}</p>
-                    <h3>Year Of Inception:  </h3>
-                    <p>{{ detail.year_of_inception }}</p>
-                </div>
-                <div class="container-fluid">
-                    <h3>Background</h3>
-                    <p>{{ detail.background }}</p>
-                </div>
-                <div class="container-fluid">
-                    <h3>Stadium</h3>
-                    <h4>{{ detail.training_ground }}</h4>
-                    <h4>Capacity: {{ detail.ground_capacity }}</h4>
-                    <img class="stadium" src="{{ detail.stadium_url }}">
-                </div>
-                <div class="container-fluid">
-                    <h3>Manager: {{ detail.manager }}</h3>
-                    <h3>Players</h3>
-                    <p>	</p>
-                </div>
-            </div>
-        {% endfor %}
-
-            {% for trophy in trophies %}
-            
-            <div class="col-sm-12 col-md-2">
-                <h2 class="main-heading">Trophies Won</h2>
-                    <div class="container-fluid">
-                        <h4>English Champion </h4>
-                        <img class="trophy" src="{{url_for('static', filename='img/trophy/premier-league-cup.png')}}" >
-                        <div class="container number">
-                        <p>{{ trophy.english_champion_trophies }}</p>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <h4>FA Cup </h4>
-                        <img class="trophy h-240" src="{{url_for('static', filename='img/trophy/fa-cup.png')}}" >
-                        <div class="container number">
-                        <p>{{ trophy.fa_cup_trophies }}</p>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <h4>Champions League </h4>
-                        <img class="trophy" src="{{url_for('static', filename='img/trophy/champions-league-cup.png')}}" >
-                        <div class="container number">
-                        <p>{{ trophy.champions_league_trophies}}</p>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <h4>Europa Cup </h4>
-                        <img class="trophy" src="{{url_for('static', filename='img/trophy/europa-league-cup.png')}}" >
-                        <div class="container number">
-                        <p>{{ trophy.europa_league_trophies}}</p>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-{% endfor %}
-       
-        <div class="row justify-content-center no-gutters">
-            <div class="col-sm-12 col-md-8">
-                <h3>First Team Players</h3>
-            <table class="table table-striped">
-                <thead>
-                    <th scope="col">Player Number</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Nationality</th>
-                    <th scope="col">Change</th>
-                </thead>
-                <body>
-                    {% for player in players %}
-                    <tr> 
-                        <td>{{ player.number}}</td>
-                        <td>{{ player.name}}</td>
-                        <td>{{ player.position}}</td>
-                        <td>{{ player.nationality}}</td>
-                        <td><a href="{{ url_for('edit_player', player_id= player._id)}}">Edit Details</a>
-                            <a href="{{ url_for('delete_player', player_id= player._id)}}">Delete Player</a></td>
-                    </tr>
-                    {% endfor %}
-                </body>
-            </table>
-            </div> 
-        </div>
          {% block content %}
         {% endblock %}
         
