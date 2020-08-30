@@ -4,46 +4,49 @@
         <div class="row justify-content-center no-gutters">
             <div class=" col-sm-12 col-md-8">
                 <div class="jumbotron ">
-                    <h3 class="lead">Add New Player</h3>
-                    
+                    <h3 >Add New Player</h3>
+                    <p> Fill in all the information below and click subit to add a new player. Makes sure to fill in all the boxes befor submiting</p>
                 </div>
-                <h3>Add New Player</h3>
             </div>
         </div>
         
-        <div class="row justify-content-center no-gutters">
+        <div class="row justify-content-center no-gutters add-player">
             
                 
                 <form class="col-md-8" action="{{ url_for('insert_player') }}" method="POST">
 
                         <div class="col-md-8 form-row align-items-center">
                             <div class="col-auto my-1">
+                            <i class="far fa-futbol"></i>
                             <select class="custom-select mr-sm-2" id="choose-club" name="club">
-                                <option value="" disabled selected><span class="flaticon-club"></span>Choose Club</option>
+                                <option value="" disabled selected>Choose Club</option>
                                 {% for cat in clubs %}
                                 <option value="{{ cat.club_name}}">{{ cat.club_name }}</option>
                                 {% endfor %}
                             </select>
                             </div>
-                        ~</div>
+                        </div>
                         <div class="col-md-8 form-group">
-                            <label for="club-name"><span class="flaticon-name"></span>Players Name</label>
-                            <input id="player-name" name="name" type="text" value="" class="validate" placeholder="Full Name">
+                            
+                            <input id="player-name" name="name" type="text" value="" class="validate"  required>
+                            <label class="label" for="player-name"><span class="label-content"><i class="far fa-address-card"></i>Players Name</span></label>
                         </div>
                         
                         <div class="col-md-8 form-group">
-                            <label for="club-name"><i class="flaticon-soccer"></i>Players Position</label>
-                            <input id="player-position" name="position" type="text" value="" class="validate" placeholder="position">
+                            
+                            <input id="player-position" name="position" type="text" value="" class="validate"  required>
+                            <label class="label" for="player-position"><span class="label-content"><i class="fas fa-arrows-alt"></i>Players Position</span></label>
                         </div>
 
                         <div class="col-md-8 form-group">
-                            <label for="club-name"><span class="flaticon-europe"></span>Players Nationality</label>
-                            <input id="player-nationality" name="nationality" type="text" value="" class="validate" placeholder="Naitonality">
+                            
+                            <input id="player-nationality" name="nationality" type="text" value="" class="validate"  required>
+                            <label class="label" for="player-nationality"><span class="label-content"><i class="far fa-flag"></i>Players Nationality</span></label>
                         </div>
                         <div class="col-md-8 form-group">
-                            <label for="club-name"><span class="flaticon-number"></span>Players Shirt Number</label>
-                            <input id="player-number" name="number" type="text" value="" class="validate" placeholder="Shirt Number">
-
+                            
+                            <input id="player-number" name="number" type="text" value="" class="validate"  required>
+                            <label class="label" for="player-number"><span class="label-content"><i class="fas fa-tshirt"></i>Players Shirt Number</span></label>
                         </div>
                        <button class="btn btn-primary" type="submit" name="action">Submit</button> 
                 </form> 

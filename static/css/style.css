@@ -257,7 +257,7 @@ color:#fff;
 .trophy{
     width:130px;
 }
-.number{
+.number p{
     border-radius: 10px;
     background-color: #3d195b;
     display: inline-block;
@@ -295,7 +295,87 @@ margin-top: 40px;
     margin-top: 50px;
 }
 /*--Edit Page--*/
-
+.edit-player .form-group label, .edit-player .form-group input{
+    color: black !important;
+}
 .container{
     display:inline;
+}
+/*---Add Player Page---*/
+.col-auto{
+    margin-left: -17px;
+    font-size: 20px;
+}
+.btn-primary{
+    background-color:#008080;
+}
+.custom-select{
+    width:auto;
+}
+i{
+    padding-right:10px;
+}
+.form-row{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.form-group{
+    margin-bottom: 70px;
+    width: 100%;
+    position: relative;
+    height: 90px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.form-group input{
+    width: 100%;
+    height: 100%;
+    color: #008080;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+}
+.form-group label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form-group label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width:100%;
+    border-bottom: 3px solid #008080;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.label-content{
+    position: absolute;
+    bottom: 5px;
+    left:0px;
+    translate: all 0.3s ease;
+
+}
+
+.form-group input:focus + .label, 
+.form-group input:valid + .label {
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #008080;
+}
+
+.form-group input:focus + .label::after, 
+.form-group input:valid + .label::after{
+    transform: translateX(0%);
 }

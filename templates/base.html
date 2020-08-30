@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-        <link rel="stylesheet" href="{{url_for('static', filename='icons/flaticon.css')}}" type="text/css" />
-        <title>Home</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+        <title> Home</title>
     </head>
     <body>
     <!--Navbar-->
@@ -15,53 +16,53 @@
             <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="{{url_for('get_clubs')}}" class="nav-link">Home</a>
                 </li>
                 <!--All Teams Dropdown -->
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clubs<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#" class="dropdown-item arsenal-link">Arsenal</a>
+                            <a href="{{url_for('arsenal')}}" class="dropdown-item arsenal-link">Arsenal</a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-item aston-villa-link">Aston Villa</a>
+                            <a href="{{url_for('aston_villa')}}" class="dropdown-item aston-villa-link">Aston Villa</a>
                         </li><li>
-                            <a href="#" class="dropdown-item bournemouth-link">Bournemouth</a>
+                            <a href="{{url_for('bournemouth')}}" class="dropdown-item bournemouth-link">Bournemouth</a>
                         </li><li>
-                            <a href="#" class="dropdown-item brighton-link">Brighton</a>
+                            <a href="{{url_for('brighton')}}" class="dropdown-item brighton-link">Brighton</a>
                         </li><li>
-                            <a href="#" class="dropdown-item burnley-link">Burnley</a>
+                            <a href="{{url_for('burnley')}}" class="dropdown-item burnley-link">Burnley</a>
                         </li><li>
-                            <a href="#" class="dropdown-item chelsea-link">Chelsea</a>
+                            <a href="{{url_for('chelsea')}}" class="dropdown-item chelsea-link">Chelsea</a>
                         </li><li>
-                            <a href="#" class="dropdown-item crystal-palace-link">Crystal Palace</a>
+                            <a href="{{url_for('crystal_palace')}}" class="dropdown-item crystal-palace-link">Crystal Palace</a>
                         </li><li>
-                            <a href="#" class="dropdown-item everton-link">Everton</a>
+                            <a href="{{url_for('everton')}}" class="dropdown-item everton-link">Everton</a>
                         </li><li>
-                            <a href="#" class="dropdown-item leicester-link">Leicester</a>
+                            <a href="{{url_for('leicester')}}" class="dropdown-item leicester-link">Leicester</a>
                         </li><li>
-                            <a href="#" class="dropdown-item liverpool-link">Liverpool</a>
+                            <a href="{{url_for('liverpool')}}" class="dropdown-item liverpool-link">Liverpool</a>
                         </li><li>
-                            <a href="#" class="dropdown-item man-city-link">Man City</a>
+                            <a href="{{url_for('manchester_city')}}" class="dropdown-item man-city-link">Man City</a>
                         </li><li>
-                            <a href="#" class="dropdown-item man-united-link">Man Utd</a>
+                            <a href="{{url_for('manchester_united')}}" class="dropdown-item man-united-link">Man Utd</a>
                         </li><li>
-                            <a href="#" class="dropdown-item newcastle-link">Newcastle</a>
+                            <a href="{{url_for('newcastle')}}" class="dropdown-item newcastle-link">Newcastle</a>
                         </li><li>
-                            <a href="#" class="dropdown-item norwhich-link">Norwich</a>
+                            <a href="{{url_for('norwhich')}}" class="dropdown-item norwhich-link">Norwich</a>
                         </li><li>
-                            <a href="#" class="dropdown-item sheffield-link">Sheffield</a>
+                            <a href="{{url_for('sheffield')}}" class="dropdown-item sheffield-link">Sheffield</a>
                         </li><li>
-                            <a href="#" class="dropdown-item southampton-link">Southampton</a>
+                            <a href="{{url_for('southampton')}}" class="dropdown-item southampton-link">Southampton</a>
                         </li><li>
-                            <a href="#" class="dropdown-item tottenham-link">Spurs</a>
+                            <a href="{{url_for('spurs')}}" class="dropdown-item tottenham-link">Spurs</a>
                         </li><li>
-                            <a href="#" class="dropdown-item watford-link">Watford</a>
+                            <a href="{{url_for('watford')}}" class="dropdown-item watford-link">Watford</a>
                         </li><li>
-                            <a href="#" class="dropdown-item west-ham-link">West Ham</a>
+                            <a href="{{url_for('west_ham')}}" class="dropdown-item west-ham-link">West Ham</a>
                         </li><li>
-                            <a href="#" class="dropdown-item wolverhampton-link">Wolves</a>
+                            <a href="{{url_for('wolves')}}" class="dropdown-item wolverhampton-link">Wolves</a>
                         </li>
                     </ul>
                 </li>

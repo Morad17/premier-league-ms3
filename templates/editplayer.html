@@ -4,7 +4,7 @@
         <div class="row justify-content-center no-gutters">
             <div class=" col-sm-12 col-md-8">
                 <div class="jumbotron ">
-                    <p class="lead">Edit {{ player.name }} Details </p>
+                    <p class="lead">Edit the current player by changeing each field. By default the current information is already in the field</p>
                 </div>
             </div>
         </div>
@@ -12,53 +12,37 @@
         <div class="row justify-content-center no-gutters">
             <div class="col-sm-12 col-md-8">
                 <h3>Edit Club</h3>
-                <form action="{{ url_for('update_player', player_id=player._id) }}" method="POST">
+                <form class="edit-player" action="{{ url_for('update_player', player_id=player._id) }}" method="POST">
 
                         
                         <div class="form-group">
-                            <label for="club-name">Players Club</label>
-                            <h3>currently:</h3>
-                            <p>{{player.club}}</p>
-                           
-                            <h3>Enter New Details:</h3>
-                            <input id="player-club" name="player_club" type="text" value="{{player.club}}" class="validate" placeholder="Club">
+                        <input id="player-club" name="player_club" type="text" value="{{player.club}}" class="validate" placeholder="Club">
+                            <label class="label" for="club-name"><span class="label-content">Players Club</span></label>
                         </div>
 
                         <div class="form-group">
-                            <label for="club-name">Players Name</label>
-                            <h3>currently:</h3>
-                            <p>{{player.name}}</p>
-                           
-                            <h3>Enter New Details:</h3>
-                            <input id="player-name" name="player_name" type="text" value="{{player.name}}" class="validate" placeholder="Full Name">
+                            <input id="player-name" name="player_name" type="text" value="{{player.name}}" class="validate" placeholder="Full Name"> 
+                            <label class="label" for="player-name"><span class="label-content"><i class="far fa-address-card"></i>Players Name</span></label>
+
                         </div>
                         
                         <div class="form-group">
-                            <label for="club-name">Players Position</label>
-                            <h3>currently:</h3>
-                            <p>{{player.position}}</p>
-                           
-                            <h3>Enter New Details:</h3>
                             <input id="player-position" name="player_position" type="text" value="{{player.position}}" class="validate" placeholder="position">
-                        </div>
-                        <div class="form-group">
-                            <label for="club-name">Players Nationality</label>
-                            <h3>currently:</h3>
-                            <p>{{player.nationality}}</p>
-                           
-                            <h3>Enter New Details:</h3>
-                            <input id="player-nationality" name="player_nationality" type="text" value="{{player.nationality}}" class="validate" placeholder="Naitonality">
-                        </div>
-                        <div class="form-group">
-                            <label for="club-name">Players Shirt Number</label>
-                            <h3>currently:</h3>
-                            <p>{{player.number}}</p>
-                           
-                            <h3>Enter New Details:</h3>
-                            <input id="player-number" name="player_number" type="text" value="{{player.number}}" class="validate" placeholder="Shirt Number">
+                            <label class="label" for="player-position"><span class="label-content"><i class="fas fa-arrows-alt"></i>Players Position</span></label>
 
                         </div>
-                       <button class="btn btn-primary" type="submit" name="action">Submit</button> 
+
+                        <div class="form-group">
+                            <input id="player-nationality" name="player_nationality" type="text" value="{{player.nationality}}" class="validate" placeholder="Naitonality"> 
+                            <label class="label" for="player-nationality"><span class="label-content"><i class="far fa-flag"></i>Players Nationality</span></label>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="player-number" name="player_number" type="text" value="{{player.number}}" class="validate" placeholder="Shirt Number">
+                            <label class="label" for="player-number"><span class="label-content"><i class="fas fa-tshirt"></i>Players Shirt Number</span></label>
+                        </div>
+                       <button class=
+                       "btn btn-primary" type="submit" name="action">Submit</button> 
                 </form> 
                 </div>
             </div>
