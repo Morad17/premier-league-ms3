@@ -14,7 +14,7 @@
                 <h3>Edit Club</h3>
                 <form class="edit-player" action="{{ url_for('update_player', player_id=player._id) }}" method="POST">
 
-                        
+                        <!---Form extrapolates current player info-->
                         <div class="form-group">
                         <input id="player-club" name="player_club" type="text" value="{{player.club}}" class="validate" placeholder="Club">
                             <label class="label" for="club-name"><span class="label-content">Players Club</span></label>
@@ -41,8 +41,8 @@
                             <input id="player-number" name="player_number" type="text" value="{{player.number}}" class="validate" placeholder="Shirt Number">
                             <label class="label" for="player-number"><span class="label-content"><i class="fas fa-tshirt"></i>Players Shirt Number</span></label>
                         </div>
-                       <button class=
-                       "btn btn-primary" type="submit" name="action">Submit</button> 
+                        <!--Submit to mongodb-->
+                       <button class="btn btn-primary" type="submit" name="action">Submit</button> 
                 </form> 
                 </div>
             </div>

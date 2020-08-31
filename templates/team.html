@@ -7,11 +7,11 @@
             <div class="jumbotron jumbotron-team">
                 <img src="{{ detail.logo }}">
                 <div class="col">
-                <h2>{{ detail.club }}</h2>
-                <h5>Website: <a href="{{ detail.website }}"  target="_blank">{{ detail.website }}</a></h5>
+                <h2 class="hover">{{ detail.club }}</h2>
+                <h5 class="hover">Website: <a href="{{ detail.website }}"  target="_blank">{{ detail.website }}</a></h5>
                 </div>
                 <div class="container">
-                <h2 >"{{detail.nickname}}"</h2>
+                <h2 class="hover">"{{detail.nickname}}"</h2>
                 </div>
             </div>
         </div>
@@ -28,59 +28,59 @@
             <div class="team-details col-sm-12 col-md-6">
                 
                 <div class="container-fluid">
-                    <h3>Nickname: </h3>
-                    <p>{{ detail.nickname }}</p>
-                    <h3>Year Of Inception:  </h3>
-                    <p>{{ detail.year_of_inception }}</p>
+                    <h3 class="hover" >Nickname: </h3>
+                    <p class="hover">{{ detail.nickname }}</p>
+                    <h3 class="hover">Year Of Inception:  </h3>
+                    <p class="hover">{{ detail.year_of_inception }}</p>
                 </div>
                 <div class="container-fluid">
-                    <h3>Background</h3>
-                    <p>{{ detail.background }}</p>
+                    <h3 class="hover">Background</h3>
+                    <p class="hover">{{ detail.background }}</p>
                 </div>
                 <div class="container-fluid">
                     <h3>Stadium</h3>
-                    <h4>{{ detail.training_ground }}</h4>
-                    <h4>Capacity: {{ detail.ground_capacity }}</h4>
+                    <h4 class="hover">{{ detail.training_ground }}</h4>
+                    <h4 class="hover">Capacity: {{ detail.ground_capacity }}</h4>
                     <img class="stadium" src="{{ detail.stadium_url }}">
                 </div>
                 <div class="container-fluid">
-                    <h3>Manager: {{ detail.manager }}</h3>
-                    <h3>Players</h3>
+                    <h3 class="hover">Manager: {{ detail.manager }}</h3>
+                    <h3 class="hover">Players</h3>
                     <p>	</p>
                 </div>
             </div>
         {% endfor %}
 
             {% for trophy in trophies %}
-            
+            <!--Trophies infro from mongodb-->
             <div class="col-sm-12 col-md-2">
                 <h2 class="main-heading">Trophies Won</h2>
                     <div class="container-fluid">
                         <h4>English Champion </h4>
                         <img class="trophy" src="{{url_for('static', filename='img/trophy/premier-league-cup.png')}}" >
                         <div class="container number">
-                        <p>{{ trophy.english_champion_trophies }}</p>
+                        <p class="hover">{{ trophy.english_champion_trophies }}</p>
                         </div>
                     </div>
                     <div class="container-fluid">
                         <h4>FA Cup </h4>
                         <img class="trophy h-240" src="{{url_for('static', filename='img/trophy/fa-cup.png')}}" >
                         <div class="container number">
-                        <p>{{ trophy.fa_cup_trophies }}</p>
+                        <p class="hover">{{ trophy.fa_cup_trophies }}</p>
                         </div>
                     </div>
                     <div class="container-fluid">
                         <h4>Champions League </h4>
                         <img class="trophy" src="{{url_for('static', filename='img/trophy/champions-league-cup.png')}}" >
                         <div class="container number">
-                        <p>{{ trophy.champions_league_trophies}}</p>
+                        <p class="hover">{{ trophy.champions_league_trophies}}</p>
                         </div>
                     </div>
                     <div class="container-fluid">
                         <h4>Europa Cup </h4>
                         <img class="trophy" src="{{url_for('static', filename='img/trophy/europa-league-cup.png')}}" >
                         <div class="container number">
-                        <p>{{ trophy.europa_league_trophies}}</p>
+                        <p class="hover">{{ trophy.europa_league_trophies}}</p>
                         </div>
                     </div>
                 
@@ -93,21 +93,26 @@
                 <h3>First Team Players</h3>
             <table class="table table-striped">
                 <thead>
-                    <th scope="col">Player Number</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Nationality</th>
-                    <th scope="col">Change</th>
+                    <th class="hover" scope="col">Player Number</th>
+                    <th class="hover" scope="col">Name</th>
+                    <th class="hover" scope="col">Position</th>
+                    <th class="hover" scope="col">Nationality</th>
+                    <th class="hover" scope="col">Change</th>
                 </thead>
                 <body>
+                <!---Player table for each player-->
                     {% for player in players %}
                     <tr> 
                         <td>{{ player.number}}</td>
                         <td>{{ player.name}}</td>
                         <td>{{ player.position}}</td>
                         <td>{{ player.nationality}}</td>
-                        <td><button class="btn btn-primary" href="{{ url_for('edit_player', player_id= player._id)}}">Edit Details</button>
-                            <button class="btn btn-primary" href="{{ url_for('delete_player', player_id= player._id)}}">Delete Player</button></td>
+                        <td>
+                            <a href="{{ url_for('edit_player', player_id= player._id)}}">
+                                <button class="btn btn-primary" type="button"> Edit Details</button></a>
+                            <a href="{{ url_for('delete_player', player_id= player._id)}}">
+                                <button class="btn btn-primary" type="button"> Delete Player</button></a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </body>

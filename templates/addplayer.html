@@ -12,7 +12,7 @@
         
         <div class="row justify-content-center no-gutters add-player">
             
-                
+                <!--Form to add new player-->
                 <form class="col-md-8" action="{{ url_for('insert_player') }}" method="POST">
 
                         <div class="col-md-8 form-row align-items-center">
@@ -48,6 +48,7 @@
                             <input id="player-number" name="number" type="text" value="" class="validate"  required>
                             <label class="label" for="player-number"><span class="label-content"><i class="fas fa-tshirt"></i>Players Shirt Number</span></label>
                         </div>
+                        <!--Submits information-->
                        <button class="btn btn-primary" type="submit" name="action">Submit</button> 
                 </form> 
                 

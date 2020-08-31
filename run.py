@@ -1,5 +1,7 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, request, render_template, redirect, url_for
+
+
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -12,19 +14,11 @@ mongo = PyMongo(app)
 
 ###User Landing Page####
 @app.route('/')
+
 @app.route('/get_clubs')
 def get_clubs():
-    """user chooses which club to view"""
     detail = mongo.db.Team_Details.find()
-
     return render_template("landing-page.html", detail=detail)
-
-
-####User Login####
-@app.route('/<username>')
-def user(username):
-    return
-
 
 ###Club Links ( )#####
 @app.route('/arsenal')
@@ -196,8 +190,7 @@ def add_player():
     return render_template("addplayer.html", clubs=clubs)
 
 @app.route('/insert_player', methods=['POST'])
-def insert_player():
-     
+def insert_player():  
     player = mongo.db.Club_Players
     player.insert_one(request.form.to_dict())
     return redirect(url_for('get_clubs'))

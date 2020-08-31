@@ -12,7 +12,7 @@
     <body>
     <!--Navbar-->
         <nav class="navbar navbar-expand-xl navbar-default sticky-top">
-            <a href="" class="navbar-brand"><img class="logo" src="https://res.cloudinary.com/chelsea-production/image/upload/c_fill,dpr_auto,f_auto,fl_lossy,g_auto,h_320,q_auto,w_640,z_1.0/v1/logos/leagues/Premier_League_logo_transparent" alt="premier league"><h2>Premier League</h2></a>
+            <a href="{{url_for('get_clubs')}}" class="navbar-brand"><img class="logo" src="https://res.cloudinary.com/chelsea-production/image/upload/c_fill,dpr_auto,f_auto,fl_lossy,g_auto,h_320,q_auto,w_640,z_1.0/v1/logos/leagues/Premier_League_logo_transparent" alt="premier league"><h2>Premier League</h2></a>
             <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
@@ -72,16 +72,12 @@
                 
             </div>
         </nav>
-
-         {% block content %}
+     {% block content %}
         {% endblock %}
         
         
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script>
-            $('.dropdown-toggle').dropdown()
-        </script>
     </body>
 </html>
