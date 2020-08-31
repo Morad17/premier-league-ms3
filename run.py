@@ -29,14 +29,11 @@ def user(username):
 ###Club Links ( )#####
 @app.route('/arsenal')
 def arsenal():
-    category = mongo.db.Team_Details.find({'club':'Arsenal FC'})
     details = mongo.db.Team_Details.find({'club':'Arsenal FC'})
     trophies = mongo.db.Trophies_Won.find({'club':'Arsenal FC'})
     players = mongo.db.Club_Players.find({'club':'Arsenal FC'})
-    categories = list(mongo.db.Club_Categories.find())
     
-    
-    return render_template("team.html", details=details, trophies=trophies, players=players, categories=categories, category=category)
+    return render_template("team.html", details=details, trophies=trophies, players=players,)
 
 @app.route('/aston_villa')
 def aston_villa():
@@ -154,7 +151,7 @@ def sheffield():
 def southampton():
     details = mongo.db.Team_Details.find({'club':'Southampton'})
     trophies = mongo.db.Trophies_Won.find({'club':'Southampton'})
-    
+    players = mongo.db.Club_Players.find({'club':'Southampton'})
     
     return render_template("team.html", details=details, trophies=trophies, players=players)
 
@@ -162,29 +159,33 @@ def southampton():
 def spurs():
     details = mongo.db.Team_Details.find({'club':'Tottenham Hotspur'})
     trophies = mongo.db.Trophies_Won.find({'club':'Tottenham Hotspur'})
-    
+    players = mongo.db.Club_Players.find({'club':'Tottenham Hotspur'})
     return render_template("team.html", details=details, trophies=trophies, players=players)
 
 @app.route('/watford')
 def watford():
     details = mongo.db.Team_Details.find({'club':'Watford'})
     trophies = mongo.db.Trophies_Won.find({'club':'Watford'})
-    
+    players = mongo.db.Club_Players.find({'club':'Watford'})
     return render_template("team.html", details=details, trophies=trophies, players=players)
 
 @app.route('/west_ham')
 def west_ham():
     details = mongo.db.Team_Details.find({'club':'West Ham United'})
     trophies = mongo.db.Trophies_Won.find({'club':'West Ham United'})
-    
+    players = mongo.db.Club_Players.find({'club':'West Ham United'})
+
     return render_template("team.html", details=details, trophies=trophies, players=players)
 
 @app.route('/wolves')
 def wolves():
     details = mongo.db.Team_Details.find({'club':'Wolverhampton Wanderers'})
     trophies = mongo.db.Trophies_Won.find({'club':'Wolverhampton Wanderers'})
-    
+    players = mongo.db.Club_Players.find({'club':'Wolverhampton Wanderers'})
+
     return render_template("team.html", details=details, trophies=trophies, players=players)
+
+"""CRUD Functions"""
 
 #Adding players #
 
