@@ -1,39 +1,26 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+#Premier League
 
-Welcome Morad17,
+This project was designed for people into football and not into football alike. For footballing fans they can keep up to date with the latests player transfers, can edit and update their
+details, and laso get background information of all the clubs in the premier league. However this is also for people that dont keep up to date with football, but want to be included
+in footballing conversations! useing this website they can quickle look up any club, have access to all their info, and importanltly before a game find out the clubs first team.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+##UX
 
-## Gitpod Reminders
+This website has users in mind each step of the way. When firdst accessing the web page it clearly has instructions at the start on what to do, and has all clubs displayed in cards at
+the bottom. also the nav helps to quickly access different clubs if they are in one club page and want to go to another. they can also click add player to create a player for a club.
+The ux of the players side provides two buttons to edit and delete a player, which is usefull if the player leaves the league, or if they transfer to a different club in the premier league
+and can be updated. The information has been clearly presented and a siple layout has been used to not alienate people who know nothing about football
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+##Features
 
-`python3 -m http.server`
+The Edit Button when pressed directs the user to a page where they can change any of the players details, such as player position. To stop the user from going to and from pages, the 
+current details of the user is already displayed, so they know what they already are. clubs are listed as a dropdown, to prevent any typo's or abbreviations of the club, which would stop
+the player from appearing in the page
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+##Testing
 
-A blue button should appear to click: *Make Public*,
+##Deployment
 
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+##Credits
