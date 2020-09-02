@@ -125,11 +125,11 @@ def newcastle():
     
     return render_template("team.html", details=details, trophies=trophies, players=players)
 
-@app.route('/norwhich')
-def norwhich():
-    details = mongo.db.Team_Details.find({'club':'Norwhich City'})
-    trophies = mongo.db.Trophies_Won.find({'club':'Norwhich City'})
-    players = mongo.db.Club_Players.find({'club':'Norwhich City'})
+@app.route('/norwich')
+def norwich():
+    details = mongo.db.Team_Details.find({'club':'Norwich City'})
+    trophies = mongo.db.Trophies_Won.find({'club':'Norwich City'})
+    players = mongo.db.Club_Players.find({'club':'Norwich City'})
     
     return render_template("team.html", details=details, trophies=trophies, players=players)
 

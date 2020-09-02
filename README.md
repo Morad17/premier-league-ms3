@@ -30,7 +30,7 @@ and can be updated. The information has been clearly presented and a siple layou
 
 ### Wireframe
 A wireframe has been made with [figma](https://www.figma.com/file/8CkpJqSrwkKyawUokXX3XQ/P-L-Database).
-To highlight the responsivness of the website this image shows the different resolutions ![Image]({{url_for('static',filename='responsive-design/responsive.png')}}). Also the offical Premier League website has been used as inspiration
+To highlight the responsivness of the website this image shows the different resolutions ![Image](https://github.com/Morad17/premier-league-ms3/tree/master/static/responsive-design/responsive.png'). Also the offical Premier League website has been used as inspiration
 for the layout of the page.
 
 
