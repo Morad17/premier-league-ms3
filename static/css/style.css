@@ -388,3 +388,49 @@ i{
 .form-group input:valid + .label::after{
     transform: translateX(0%);
 }
+
+/*---Media Queries----*/
+
+/*---Media Small 540 max----*/
+
+@media only screen and (max-width: 768px) {
+    .stadium{
+        width: 375px;
+    }
+
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+    thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+    
+	tr { border: 1px solid #ccc; }
+
+    td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+	}
+    .jumbotron-team .container{
+        display: block;
+    }
+    .jumbotron-team h2{
+        margin: 0;
+        font-size:30px;
+    }
+    .jumbotron-team h5, .jumbotron-team a{
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        font-size: 18px;
+        display: block;
+    }
+    .navbar-brand img{
+    margin-top: -10px;
+    margin-right: 0px;
+}
+/*---Media medium 720 max----*/
