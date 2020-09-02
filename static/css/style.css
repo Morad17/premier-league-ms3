@@ -145,6 +145,12 @@ nav a, nav h2{
 display: flex;
 justify-content: flex-end;
 }
+.jumbotro-team h2{
+    display: inline;
+}
+.jumbotro-team h5{
+    display: block;
+}
 .jumbotron .col{
 display: block;
 color: black;
