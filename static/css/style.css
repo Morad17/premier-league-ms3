@@ -397,8 +397,9 @@ i{
 
 /*---Media Queries----*/
 
-/*---Media Small 540 max----*/
 
+
+/*---Media Small 540 max----*/
 @media only screen and (max-width: 768px) {
     .stadium{
         width: 375px;
@@ -453,4 +454,3 @@ i{
         width: 90px;
     }
 }
-/*---Media medium 720 max----*/
