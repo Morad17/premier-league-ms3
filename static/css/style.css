@@ -432,5 +432,16 @@ i{
     .navbar-brand img{
     margin-top: -10px;
     margin-right: 0px;
+    }
+    .card-row div{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .card-row{
+        margin-top:0px;
+    }
+    .card-title{
+        font-size: 23px !important;
+    }
 }
 /*---Media medium 720 max----*/
