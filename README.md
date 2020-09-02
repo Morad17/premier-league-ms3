@@ -24,3 +24,4 @@ the player from appearing in the page
 ##Deployment
 
 ##Credits
+css-tricks.com
