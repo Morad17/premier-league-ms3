@@ -1,5 +1,5 @@
 # Premier League
-
+ The project can be viewed here [link](http://premier-league-ms3.herokuapp.com/).
 This project was designed for people into football and not into football alike. For footballing fans they can keep up to date with the latests player transfers, can edit and update their
 details, and laso get background information of all the clubs in the premier league. However this is also for people that dont keep up to date with football, but want to be included
 in footballing conversations! useing this website they can quickle look up any club, have access to all their info, and importanltly before a game find out the clubs first team.
