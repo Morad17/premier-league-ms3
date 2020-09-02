@@ -428,8 +428,7 @@ i{
         margin: 0;
         font-size:30px;
     }
-    .jumbotron-team h5, .jumbotron-team a{
-        text-decoration: none;
+    .jumbotron-team h5{
         color: black;
         margin: 0;
         font-size: 18px;
@@ -448,6 +447,10 @@ i{
     }
     .card-title{
         font-size: 23px !important;
+    }
+    .jumbotron-team img{
+        margin-left:-20px;
+        width: 90px;
     }
 }
 /*---Media medium 720 max----*/
