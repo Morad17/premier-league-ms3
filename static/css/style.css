@@ -55,9 +55,9 @@ nav a, nav h2{
     background-color:#7A003C;
     border-color:#7A003C;
 }
-.dropdown-menu .bournemouth-link:hover{
-    background-color:#DA291C;
-    border-color:#DA291C;
+.dropdown-menu .fulham-link:hover{
+    background-color:#CC0000;
+    border-color:#CC0000;
 }
 .dropdown-menu .brighton-link:hover{
     background-color:#005daa;
@@ -99,9 +99,9 @@ nav a, nav h2{
     background-color:#241F20;
     border-color:#241F20;
 }
-.dropdown-menu .norwich-link:hover{
-    background-color:#00A650;
-    border-color:#00A650;
+.dropdown-menu .leeds-link:hover{
+    background-color:#FFCD00;
+    border-color:#FFCD00;
 }
 .dropdown-menu .sheffield-link:hover{
     background-color:#EE2737;
@@ -115,9 +115,9 @@ nav a, nav h2{
     background-color:#132257;
     border-color:#132257;
 }
-.dropdown-menu .watford-link:hover{
-    background-color:#11210C;
-    border-color:#11210C;
+.dropdown-menu .west-brom-link:hover{
+    background-color:#122F67;
+    border-color:#122F67;
 }
 .dropdown-menu .west-ham-link:hover{
     background-color:#7A263A;
@@ -207,9 +207,6 @@ color:#fff;
 .card-aston-villa{
     background-color:  #7A003C;
 }
-.card-bournemouth{
-    background-color:  #DA291C;
-}
 .card-brighton{
     background-color:  #005daa;
 }
@@ -224,6 +221,12 @@ color:#fff;
 }
 .card-everton{
     background-color:  #003399;
+}
+.card-fulham{
+    background-color:  #CC0000;
+}
+.card-leeds{
+    background-color:  #FFCD00;
 }
 .card-leicester{
     background-color:  #0053a0;
@@ -240,9 +243,6 @@ color:#fff;
 .card-newcastle{
     background-color:  #241F20;
 }
-.card-norwich{
-    background-color:  #00A650;
-}
 .card-sheffield{
     background-color:  #EE2737;
 }
@@ -252,8 +252,8 @@ color:#fff;
 .card-tottenham{
     background-color:  #132257;
 }
-.card-watford{
-    background-color:  #11210C;
+.card-west-brom{
+    background-color:  #122F67;
 }
 .card-west-ham{
     background-color:  #7A263A;
